@@ -7,9 +7,11 @@
 class Method : public Unit {
 public:
     enum Modifier { // TODO: перевести в родительский класс
-        STATIC = 1, // первый бит = 1 => функция получит STATIC
-        CONST = 1 << 1, // второй бит = 1 => функция получит CONST
-        VIRTUAL = 1 <<  2   // третий бит = 1 => функция получит VIRTUAL
+        STATIC = 1, // первый бит = 1 => функция получит STATIC // C++, Java, C#
+        CONST = 1 << 1, // второй бит = 1 => функция получит CONST  // C++
+        VIRTUAL = 1 <<  2,   // третий бит = 1 => функция получит VIRTUAL    // C++, C#
+        FINAL = 1 << 3,     // четвернтый бит = 1 => функция получит FINAL  // Java
+        ABSTRACT = 1 << 4   // пятый бит = 1 => функция получит  // Java
     };
 protected:
     Method(const std::string& name, const std::string& returnType, Flags flags ) : // конструктор метода

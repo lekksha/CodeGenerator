@@ -1,7 +1,5 @@
-#include "classCpp.h"
-#include "methodCpp.h"
-#include "printoperatorCpp.h"
 #include "factoryCpp.h"
+#include "factoryJava.h"
 #include <QCoreApplication>
 #include <iostream>
 
@@ -16,12 +14,26 @@ std::string generateProgram() {
     myClass.add( method, ClassUnit::PROTECTED );
     return myClass.compile();
     */
-    FactoryAbstract* fact = new FactoryCpp();
+
+    /* // C++ code
+    auto fact = std::make_shared<FactoryCpp>();
     auto clsC = fact->createClass("prikol");
     auto mthC = fact->createMethod("rzhaka", "void", Method::VIRTUAL);
+    auto prntC = fact->createPrintOperator("lol");
+    mthC->add(prntC, 0);
     clsC->add(mthC, Class::PUBLIC);
     return clsC->compile();
+    */
 
+    /* // Java code
+    auto fact = std::make_shared<FactoryJava>();
+    auto clsJ = fact->createClass("prikol");
+    auto mthJ = fact->createMethod("rzhaka", "void", Method::VIRTUAL);
+    auto prntJ = fact->createPrintOperator("lol");
+    mthJ->add(prntJ, 0);
+    clsJ->add(mthJ, Class::PUBLIC);
+    return clsJ->compile();
+    */
 }
 
 int main(int argc, char *argv[])

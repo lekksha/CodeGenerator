@@ -10,11 +10,12 @@ class ClassCpp : public Class
 public:
     static const std::vector< std::string > ACCESS_MODIFIERS ;   // инициализирован вне класса
 
-    explicit ClassCpp(const std::string &name): Class(name, ACCESS_MODIFIERS.size()) {    // конструктор.  инициализирует имя класса    // TODO: ???? как это теперь работает?
+    explicit ClassCpp(const std::string &name): Class(name, ACCESS_MODIFIERS.size())  {    // конструктор.  инициализирует имя класса
         m_fields.resize( ACCESS_MODIFIERS.size() );     // изменяет размер вектора на размер равный количеству модификаторов доступа
+        m_name = name;
     }
 
-    void add( const std::shared_ptr< Unit >& unit, Flags flags )    // функция для добавления член-данного или член-функции с своим модификатором доступа
+    void add( const std::shared_ptr< Unit >& unit, Flags flags ) override    // функция для добавления член-данного или член-функции с своим модификатором доступа
     {
         int accessModifier = PRIVATE;   // = 0
         if( flags < ACCESS_MODIFIERS.size() )   // ? Проверяем что модификатор доступа является корректным
@@ -30,7 +31,7 @@ public:
         */
     }
 
-    std::string compile( unsigned int level = 0 ) const
+    std::string compile( unsigned int level = 0 ) const override
     {
         std::string result = generateShift( level ) + "class " + m_name + " {\n";   // делаем отступ и выводим инициализацию класса
         for( size_t i = 0; i < ACCESS_MODIFIERS.size(); ++i )

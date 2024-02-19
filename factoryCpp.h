@@ -3,6 +3,8 @@
 
 #include "factoryAbstract.h"
 #include "classCpp.h"
+#include "methodCpp.h"
+#include "printoperatorCpp.h"
 
 class FactoryCpp : public FactoryAbstract{
 public:
@@ -14,7 +16,8 @@ public:
         return std::make_shared<MethodCpp>(name, returnType, flags);
     }
 
-    std::shared_ptr<PrintOperator> createPrintOperator(const std::string& name, const std::string& returnType, Class::Flags flags) const {
+    std::shared_ptr<PrintOperator> createPrintOperator(const std::string& text) const override{
+        return std::make_shared<PrintOperatorСpp>(text);
     };
 };
 
