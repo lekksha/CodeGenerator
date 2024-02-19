@@ -1,20 +1,19 @@
-#ifndef METHODUNIT_H
-#define METHODUNIT_H
-#include "unit.h"
+#ifndef METHODCPP_H
+#define METHODCPP_H
+#include "method.h"
 #include <vector>
-#include <unit.h>
 
 
-class MethodUnit : public Unit {
+class MethodUnit : public Method {
 public:
-    enum Modifier {
+    enum Modifier { // TODO: перевести в родительский класс
         STATIC = 1, // первый бит = 1 => функция получит STATIC
         CONST = 1 << 1, // второй бит = 1 => функция получит CONST
         VIRTUAL = 1 <<  2   // третий бит = 1 => функция получит VIRTUAL
     };
 public:
-    MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) : // конструктор метода
-        m_name( name ), m_returnType( returnType ), m_flags( flags ) { }
+    MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) : Method(name, returnType, flags) // конструктор метода
+         { }
 
     void add( const std::shared_ptr< Unit >& unit, Flags /* flags */ = 0 ) {    // добавление инструкций в список методов подлежащих созданию
         m_body.push_back( unit );
@@ -38,11 +37,6 @@ public:
         result += generateShift( level ) + "}\n";   // закрываем метод с помощью фигурной скобки
         return result;
     }
-private:
-    std::string m_name; // имя метода
-    std::string m_returnType;   // тип возвращаемого значения метода
-    Flags m_flags;  // модификаторы метода
-    std::vector<std::shared_ptr<Unit>> m_body;  // вектор суще
 };
 
-#endif // METHODUNIT_H
+#endif // METHODCPP_H

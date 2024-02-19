@@ -1,0 +1,4 @@
+#ifndef FACTORYJAVA_H
+#define FACTORYJAVA_H
+
+#endif // FACTORYJAVA_H

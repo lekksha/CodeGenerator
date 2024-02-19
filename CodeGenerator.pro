@@ -16,7 +16,17 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    classunit.h \
-    methodunit.h \
-    printoperatorunit.h \
+    class.h \
+    classCpp.h \
+    classJava.h \
+    factoryAbstract.h \
+    factoryCpp.h \
+    factoryCs.h \
+    factoryJava.h \
+    method.h \
+    methodCpp.h \
+    methodJava.h \
+    printoperator.h \
+    printoperatorCpp.h \
+    printoperatorJava.h \
     unit.h

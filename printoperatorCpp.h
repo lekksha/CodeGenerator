@@ -1,12 +1,12 @@
-#ifndef PRINTOPERATORUNIT_H
-#define PRINTOPERATORUNIT_H
-#include "unit.h"
+#ifndef PRINTOPERATORCPP_H
+#define PRINTOPERATORCPP_H
+#include "printoperator.h"
 
 /*
  * Данный класс предназначен для добавления функции printf() в генерируемый код
  */
 
-class PrintOperatorUnit : public Unit {
+class PrintOperatorUnit : public PrintOperator {
 public:
     explicit PrintOperatorUnit( const std::string& text ) : m_text( text ) { }
     std::string compile( unsigned int level = 0 ) const {
@@ -16,4 +16,4 @@ private:
     std::string m_text; //  текст передаваемый как аргумент генерируемой printf()
 };
 
-#endif // PRINTOPERATORUNIT_H
+#endif // PRINTOPERATORCPP_H

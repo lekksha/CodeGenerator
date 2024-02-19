@@ -1,22 +1,16 @@
-#ifndef CLASSUNIT_H
-#define CLASSUNIT_H
+#ifndef CLASSCPP_H
+#define CLASSCPP_H
 
 
-#include "unit.h"
 #include <vector>
+#include "class.h"
 
-class ClassUnit : public Unit
+class ClassCpp : public Class
 {
 public:
-    enum AccessModifier
-    {
-        PUBLIC, // 0
-        PROTECTED,  // 1
-        PRIVATE     // 2
-    };
-    static const std::vector< std::string > ACCESS_MODIFIERS;   // инициализирован вне класса
-public:
-    explicit ClassUnit( const std::string& name ) : m_name( name ) {    // конструктор.  инициализирует имя класса
+    static const std::vector< std::string > ACCESS_MODIFIERS ;   // инициализирован вне класса
+
+    explicit ClassCpp(const std::string &name): Class(name, ACCESS_MODIFIERS.size()) {    // конструктор.  инициализирует имя класса    // TODO: ???? как это теперь работает?
         m_fields.resize( ACCESS_MODIFIERS.size() );     // изменяет размер вектора на размер равный количеству модификаторов доступа
     }
 
@@ -65,6 +59,6 @@ private:
                                     // модификатору доступа.
 };
 
-const std::vector< std::string > ClassUnit::ACCESS_MODIFIERS = { "public", "protected", "private" };
+const std::vector< std::string > ClassCpp::ACCESS_MODIFIERS = { "public", "protected", "private" };
 
-#endif // CLASSUNIT_H
+#endif // CLASSCPP_H
