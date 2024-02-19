@@ -4,21 +4,16 @@
 #include <vector>
 
 
-class MethodUnit : public Method {
-public:
-    enum Modifier { // TODO: перевести в родительский класс
-        STATIC = 1, // первый бит = 1 => функция получит STATIC
-        CONST = 1 << 1, // второй бит = 1 => функция получит CONST
-        VIRTUAL = 1 <<  2   // третий бит = 1 => функция получит VIRTUAL
-    };
-public:
-    MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) : Method(name, returnType, flags) // конструктор метода
-         { }
+class MethodCpp : public Method {
 
-    void add( const std::shared_ptr< Unit >& unit, Flags /* flags */ = 0 ) {    // добавление инструкций в список методов подлежащих созданию
+public:
+    MethodCpp( const std::string& name, const std::string& returnType, Flags flags ) : Method(name, returnType, flags) {} // конструктор метода
+    // В родительском классе член-данные уже инициализируются
+
+    void add( const std::shared_ptr< Unit >& unit, Flags /* flags */ = 0 ) override {    // добавление инструкций в список методов подлежащих созданию
         m_body.push_back( unit );
     }
-    std::string compile( unsigned int level = 0 ) const {
+    std::string compile( unsigned int level = 0 ) const override {
         std::string result = generateShift( level );
         if( m_flags & STATIC ) { // проверка на наличие бита соответствующему наличию модификатора STATIC
             result += "static ";

@@ -5,7 +5,12 @@
 #include <vector>
 
 class Method : public Unit {
-    void add(const std::shared_ptr< Unit >& unit, Flags flags );
+public:
+    enum Modifier { // TODO: перевести в родительский класс
+        STATIC = 1, // первый бит = 1 => функция получит STATIC
+        CONST = 1 << 1, // второй бит = 1 => функция получит CONST
+        VIRTUAL = 1 <<  2   // третий бит = 1 => функция получит VIRTUAL
+    };
 protected:
     Method(const std::string& name, const std::string& returnType, Flags flags ) : // конструктор метода
         m_name( name ), m_returnType( returnType ), m_flags( flags ) {};

@@ -5,7 +5,7 @@
 #include <QCoreApplication>
 #include <iostream>
 
-std::string generateProgram() { // NOW: проверить создание с++ класса
+std::string generateProgram() {
     /*
     ClassUnit myClass( "MyClass" );
     myClass.add( std::make_shared<MethodUnit>( "testFunc1", "void", 0 ), ClassUnit::PUBLIC );
@@ -17,8 +17,10 @@ std::string generateProgram() { // NOW: проверить создание с++
     return myClass.compile();
     */
     FactoryAbstract* fact = new FactoryCpp();
-    auto cls = fact->createClass("prikol");
-    return cls->compile();
+    auto clsC = fact->createClass("prikol");
+    auto mthC = fact->createMethod("rzhaka", "void", Method::VIRTUAL);
+    clsC->add(mthC, Class::PUBLIC);
+    return clsC->compile();
 
 }
 
