@@ -10,4 +10,5 @@ public:
         return generateShift(level) + "System.out.println(\"" + m_text + "\");\n";
     }
 };
+
 #endif // PRINTOPERATORJAVA_H

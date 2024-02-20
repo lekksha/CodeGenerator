@@ -17,7 +17,7 @@ public:
     }
 
     std::shared_ptr<PrintOperator> createPrintOperator(const std::string& text) const override{
-        return std::make_shared<PrintOperatorСpp>(text);
+        return std::make_shared<PrintOperatorCpp>(text);
     };
 };
 

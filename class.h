@@ -9,10 +9,12 @@ class Class : public Unit{
 public:
     enum AccessModifier // Здесь определены всевозможные спецификаторы доступа
     {
-        PUBLIC, // 0
-        PROTECTED,  // 1
-        PRIVATE     // 2
-
+        PUBLIC,             // 0 C# C++ Java
+        PROTECTED,          // 1 C# C++ Java
+        PRIVATE,            // 2 C# C++ Java
+        INTERNAL,           // 3 C#
+        PROTECTED_INTERNAL, // 4 C#
+        PRIVATE_PROTECTED,  // 5 C#
     };
 
     explicit Class(const std::string &name, size_t field_size) : m_name(name), m_fields(field_size) {}

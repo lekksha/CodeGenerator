@@ -18,6 +18,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     class.h \
     classCpp.h \
+    classCs.h \
     classJava.h \
     factoryAbstract.h \
     factoryCpp.h \
@@ -25,8 +26,10 @@ HEADERS += \
     factoryJava.h \
     method.h \
     methodCpp.h \
+    methodCs.h \
     methodJava.h \
     printoperator.h \
     printoperatorCpp.h \
+    printoperatorCs.h \
     printoperatorJava.h \
     unit.h
