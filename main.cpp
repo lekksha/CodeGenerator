@@ -5,7 +5,7 @@
 #include <iostream>
 
 std::string generateProgram() {
-    /*
+    /* Starting Code
     ClassUnit myClass( "MyClass" );
     myClass.add( std::make_shared<MethodUnit>( "testFunc1", "void", 0 ), ClassUnit::PUBLIC );
     myClass.add( std::make_shared<MethodUnit>( "testFunc2", "void", MethodUnit::STATIC ), ClassUnit::PRIVATE );

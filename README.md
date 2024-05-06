@@ -23,3 +23,5 @@ private:
     static void testFunc2() { } 
 };
 ```
+## UML
+![alt text](https://github.com/lekksha/CodeGenerator/blob/main/UML.jpg)
