@@ -6,7 +6,7 @@
 
 class Method : public Unit {
 public:
-    enum Modifier { // TODO: перевести в родительский класс
+    enum Modifier {
         STATIC = 1, // первый бит = 1 => функция получит STATIC // C++, Java, C#
         CONST = 1 << 1, // второй бит = 1 => функция получит CONST  // C++
         VIRTUAL = 1 <<  2,   // третий бит = 1 => функция получит VIRTUAL    // C++, C#
