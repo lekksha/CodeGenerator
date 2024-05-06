@@ -13,9 +13,13 @@ public:
         FINAL = 1 << 3,     // четвернтый бит = 1 => функция получит FINAL  // Java
         ABSTRACT = 1 << 4   // пятый бит = 1 => функция получит  // Java
     };
+    void add( const std::shared_ptr< Unit >& unit, Flags /* flags */ = 0 ) override {    // добавление инструкций в список методов подлежащих созданию
+        m_body.push_back( unit );
+    }
 protected:
     Method(const std::string& name, const std::string& returnType, Flags flags ) : // конструктор метода
         m_name( name ), m_returnType( returnType ), m_flags( flags ) {};
+
     std::string m_name; // имя метода
     std::string m_returnType;   // тип возвращаемого значения метода
     Flags m_flags;  // модификаторы метода
