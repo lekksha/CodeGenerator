@@ -9,9 +9,6 @@ public:
     MethodCs( const std::string& name, const std::string& returnType, Flags flags ) : Method(name, returnType, flags) {} // конструктор метода
     // В родительском классе член-данные уже инициализируются
 
-    void add( const std::shared_ptr< Unit >& unit, Flags /* flags */ = 0 ) override {    // добавление инструкций в список методов подлежащих созданию
-        m_body.push_back( unit );
-    }
     std::string compile( unsigned int level = 0 ) const override {
         std::string result = generateShift( level );
 
