@@ -4,19 +4,7 @@
 #include <QCoreApplication>
 #include <iostream>
 
-std::string generateProgram() {
-    /* Starting Code
-    ClassUnit myClass( "MyClass" );
-    myClass.add( std::make_shared<MethodUnit>( "testFunc1", "void", 0 ), ClassUnit::PUBLIC );
-    myClass.add( std::make_shared<MethodUnit>( "testFunc2", "void", MethodUnit::STATIC ), ClassUnit::PRIVATE );
-    myClass.add( std::make_shared<MethodUnit>( "testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ), ClassUnit::PUBLIC );
-    auto method = std::make_shared<MethodUnit>( "testFunc4", "void", MethodUnit::STATIC );
-    method->add( std::make_shared<PrintOperatorUnit>(R"(Hello, world!\n)" ));
-    myClass.add( method, ClassUnit::PROTECTED );
-    return myClass.compile();
-    */
-
-    /* // C++ code
+std::string generateCppProgram(){
     auto fact = std::make_shared<FactoryCpp>();
 
     auto clsCpp = fact->createClass("ExampleCppClass");
@@ -31,9 +19,12 @@ std::string generateProgram() {
     clsCpp->add(mthCppS, Class::PRIVATE);
 
     return clsCpp->compile();
-    /* */
+}
 
-    /* // Java code
+
+std::string generateJavaProgram() {
+    // Java code
+
     auto fact = std::make_shared<FactoryJava>();
 
     auto clsJava = fact->createClass("ExampleJavaClass");
@@ -48,9 +39,10 @@ std::string generateProgram() {
     clsJava->add(mthJavaFS, Class::PRIVATE);
 
     return clsJava->compile();
-    /* */
+}
 
-    /* // C# code
+
+std::string generateCsProgram() {
     auto fact = std::make_shared<FactoryCs>();
 
     auto clsCs = fact->createClass("ExampleCsClass");
@@ -65,14 +57,28 @@ std::string generateProgram() {
     clsCs->add(mthCsC, Class::PROTECTED_INTERNAL);
 
     return clsCs->compile();
-    /* */
 }
+
+
+//std::string generateProgram() {
+
+//     // Starting Code
+////    ClassUnit myClass( "MyClass" );
+////    myClass.add( std::make_shared<MethodUnit>( "testFunc1", "void", 0 ), ClassUnit::PUBLIC );
+////    myClass.add( std::make_shared<MethodUnit>( "testFunc2", "void", MethodUnit::STATIC ), ClassUnit::PRIVATE );
+////    myClass.add( std::make_shared<MethodUnit>( "testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ), ClassUnit::PUBLIC );
+////    auto method = std::make_shared<MethodUnit>( "testFunc4", "void", MethodUnit::STATIC );
+////    method->add( std::make_shared<PrintOperatorUnit>(R"(Hello, world!\n)" ));
+////    myClass.add( method, ClassUnit::PROTECTED );
+////    return myClass.compile();
+
+//}
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    std::cout << generateProgram() << std::endl;
+    std::cout << generateCppProgram() << std::endl;
 
     return a.exec();
 }
