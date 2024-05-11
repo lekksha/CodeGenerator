@@ -115,12 +115,13 @@ std::string generateForTest(std::shared_ptr<T> factory) {
     mth2->add(print2);
 
 
-    // Вкладываем класс в класс (создадим еще один) // Языки позволяют вкладывать класс в класс
+    // Вкладываем класс в класс (создадим еще один)
+    // Языки позволяют вкладывать класс в класс
     //auto cls2 = factory->createClass("TestClass2");
     //cls->add(cls2, Class::PUBLIC);
 
     // Вкладываем оператор печати в класс
-    //cls->add(print, Class::PUBLIC); // Вложился
+    //cls->add(print, Class::PUBLIC);   // Вложился
 
     //Вкладываем класс в метод  // Программа не работает
     //mth2->add(cls);
@@ -128,10 +129,10 @@ std::string generateForTest(std::shared_ptr<T> factory) {
     //Вкладываем метод в метод  // Вложился
     //mth2->add(mth1);
 
-    //Вкладываем класс в оператор печати    // Получаем ошибку определенный в unit
+    //Вкладываем класс в оператор печати    // Получаем ошибку определенную в unit
     //print->add(cls, 0);
 
-    //Вкладываем оператор печати в оператор печати // Получаем ошибку определенную в unit
+    //Вкладываем оператор печати в оператор печати  // Получаем ошибку определенную в unit
     //print -> add(print, 0);
 
     return cls->compile();
@@ -143,15 +144,15 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     std::cout << generateForTask(std::make_shared<FactoryCpp>());
-    std::cout << std::endl << "// C++ is shown above. Press enter to continue";
+    std::cout << std::endl << "// C++ is shown above. Press \"Enter\" to continue";
     getchar(); system("cls");
 
     std::cout << generateForTask(std::make_shared<FactoryJava>());
-    std::cout << std::endl << "// Java is shown above. Press enter to continue";
+    std::cout << std::endl << "// Java is shown above. Press \"Enter\" to continue";
     getchar(); system("cls");
 
     std::cout << generateForTask(std::make_shared<FactoryCs>());
-    std::cout << std::endl << "// C# is shown above. Press enter to continue";
+    std::cout << std::endl << "// C# is shown above. Press \"Enter\" to continue";
     getchar(); system("cls");
 
 //    std::cout << generateForTest(std::make_shared<FactoryCpp>());
