@@ -7,7 +7,7 @@
 class ClassCs : public Class
 {
 public:
-    static const std::vector< std::string > ACCESS_MODIFIERS ;   // инициализирован вне класса
+    //static const std::vector< std::string > ACCESS_MODIFIERS ;   // инициализирован вне класса
 
     explicit ClassCs(const std::string &name): Class(name, ACCESS_MODIFIERS.size())  {    // конструктор.  инициализирует имя класса
         m_fields.resize( ACCESS_MODIFIERS.size() );     // изменяет размер вектора на размер равный количеству модификаторов доступа
@@ -16,6 +16,24 @@ public:
 
     void add( const std::shared_ptr< Unit >& unit, Flags flags ) override    // функция для добавления член-данного или член-функции с своим модификатором доступа
     {
+        int accessModifier = INTERNAL;   // по умолчанию internal
+        if (flags & PRIVATE) {
+            accessModifier = PRIVATE;
+        }
+        else if (flags & PROTECTED) {
+            accessModifier = PROTECTED;
+        }
+        else if (flags & PUBLIC) {
+            accessModifier = PUBLIC;
+        }
+        else if (flags & PROTECTED_INTERNAL) {
+            accessModifier = PROTECTED_INTERNAL;
+        }
+        else if (flags & PRIVATE_PROTECTED) {
+            accessModifier = PRIVATE_PROTECTED;
+        }
+        m_fields[ accessModifier ].push_back( unit );
+        /*
         int accessModifier = PRIVATE;   // = 0
         if( flags < ACCESS_MODIFIERS.size() )   // ? Проверяем что модификатор доступа является корректным
         {
@@ -58,6 +76,6 @@ private:
                                     // модификатору доступа.
 };
 
-const std::vector< std::string > ClassCs::ACCESS_MODIFIERS = { "public", "protected", "private", "internal", "protected internal", "private protected" };
+//const std::vector< std::string > ClassCs::ACCESS_MODIFIERS = { "public", "protected", "private", "internal", "protected internal", "private protected" };
 
 #endif // CLASSCS_H
