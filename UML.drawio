@@ -1,25 +1,25 @@
-<mxfile host="app.diagrams.net" modified="2024-05-06T10:18:51.662Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="6AHPL0DVyt7TcfUtThPz" version="24.3.0" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-13T11:22:44.999Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="9LQEqhHAE_ZetF135xwr" version="24.4.0" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1764" dy="1018" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="3000" math="0" shadow="0">
+    <mxGraphModel dx="970" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="3000" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="gezvIGPkTuoUHlUliIxv-8" value="ClassCpp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1430.01" y="930" width="340" height="142" as="geometry">
+          <mxGeometry x="1430.01" y="930" width="340" height="122" as="geometry">
             <mxRectangle x="1370" y="910" width="100" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gezvIGPkTuoUHlUliIxv-9" value="+ static const&amp;nbsp; ACCESS_MODIFIERS : std::vector&amp;lt;std::string&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-8" vertex="1">
-          <mxGeometry y="26" width="340" height="44" as="geometry" />
+        <mxCell id="gezvIGPkTuoUHlUliIxv-9" value="." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-8" vertex="1">
+          <mxGeometry y="26" width="340" height="24" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-10" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="gezvIGPkTuoUHlUliIxv-8" vertex="1">
-          <mxGeometry y="70" width="340" height="10" as="geometry" />
+          <mxGeometry y="50" width="340" height="10" as="geometry" />
         </mxCell>
         <mxCell id="6ZI4dqy2-xrWHT3vHo12-13" value="+ add(const std::shared_ptr&amp;lt; Unit &amp;gt;&amp;amp; unit, Flags flags&amp;nbsp;): Void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-8" vertex="1">
-          <mxGeometry y="80" width="340" height="30" as="geometry" />
+          <mxGeometry y="60" width="340" height="30" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-11" value="+ compile( unsigned int level = 0 ) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-8" vertex="1">
-          <mxGeometry y="110" width="340" height="32" as="geometry" />
+          <mxGeometry y="90" width="340" height="32" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-108" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=10;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="6ZI4dqy2-xrWHT3vHo12-33" target="gezvIGPkTuoUHlUliIxv-104" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -62,7 +62,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-67" value="MethodCpp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1430" y="1430" width="340" height="86" as="geometry" />
+          <mxGeometry x="1430" y="1430" width="340" height="120" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-68" value="." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-67" vertex="1">
           <mxGeometry y="26" width="340" height="26" as="geometry" />
@@ -70,11 +70,14 @@
         <mxCell id="gezvIGPkTuoUHlUliIxv-69" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="gezvIGPkTuoUHlUliIxv-67" vertex="1">
           <mxGeometry y="52" width="340" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="gezvIGPkTuoUHlUliIxv-70" value="+ compile( unsigned int level = 0 ) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-67" vertex="1">
+        <mxCell id="7qQUv7Jo1ADHQWkO8-V3-0" value="+ compile( unsigned int level = 0 ) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="gezvIGPkTuoUHlUliIxv-67">
           <mxGeometry y="60" width="340" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="7qQUv7Jo1ADHQWkO8-V3-2" value="+ add(const std::shared_ptr&amp;lt; Unit &amp;gt;&amp;amp; unit, Flags flags&amp;nbsp;): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="gezvIGPkTuoUHlUliIxv-67">
+          <mxGeometry y="86" width="340" height="34" as="geometry" />
+        </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-71" value="&lt;i&gt;Method&lt;/i&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1020" y="1570" width="340" height="148" as="geometry" />
+          <mxGeometry x="1020" y="1570" width="340" height="140" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-72" value="&lt;div&gt;# m_name :&amp;nbsp;std::string&lt;/div&gt;&lt;div&gt;# m_returnType :&amp;nbsp;std::string&lt;/div&gt;&lt;div&gt;# m_flags : Flags&lt;/div&gt;&lt;div&gt;# m_body :&amp;nbsp;std::vector&amp;lt;std::shared_ptr&amp;lt;Unit&amp;gt;&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-71" vertex="1">
           <mxGeometry y="26" width="340" height="74" as="geometry" />
@@ -82,11 +85,11 @@
         <mxCell id="gezvIGPkTuoUHlUliIxv-73" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="gezvIGPkTuoUHlUliIxv-71" vertex="1">
           <mxGeometry y="100" width="340" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="6ZI4dqy2-xrWHT3vHo12-28" value="+ add(const std::shared_ptr&amp;lt; Unit &amp;gt;&amp;amp; unit, Flags flags&amp;nbsp;): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-71" vertex="1">
-          <mxGeometry y="108" width="340" height="40" as="geometry" />
+        <mxCell id="6ZI4dqy2-xrWHT3vHo12-28" value="." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-71" vertex="1">
+          <mxGeometry y="108" width="340" height="32" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-75" value="MethodJava" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1430" y="1580" width="340" height="86" as="geometry" />
+          <mxGeometry x="1430" y="1580" width="340" height="120" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-76" value="." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-75" vertex="1">
           <mxGeometry y="26" width="340" height="26" as="geometry" />
@@ -97,8 +100,11 @@
         <mxCell id="gezvIGPkTuoUHlUliIxv-78" value="+ compile( unsigned int level = 0 ) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-75" vertex="1">
           <mxGeometry y="60" width="340" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="7qQUv7Jo1ADHQWkO8-V3-1" value="+ add(const std::shared_ptr&amp;lt; Unit &amp;gt;&amp;amp; unit, Flags flags&amp;nbsp;): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="gezvIGPkTuoUHlUliIxv-75">
+          <mxGeometry y="86" width="340" height="34" as="geometry" />
+        </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-80" value="MethodCs" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1430" y="1720" width="340" height="86" as="geometry" />
+          <mxGeometry x="1430" y="1720" width="340" height="120" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-81" value="." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-80" vertex="1">
           <mxGeometry y="26" width="340" height="26" as="geometry" />
@@ -106,8 +112,11 @@
         <mxCell id="gezvIGPkTuoUHlUliIxv-82" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="gezvIGPkTuoUHlUliIxv-80" vertex="1">
           <mxGeometry y="52" width="340" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="MN3qIhoa0ov2QLaZOu2q-2" value="+ compile( unsigned int level = 0 ) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="gezvIGPkTuoUHlUliIxv-80">
+        <mxCell id="MN3qIhoa0ov2QLaZOu2q-2" value="+ compile( unsigned int level = 0 ) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gezvIGPkTuoUHlUliIxv-80" vertex="1">
           <mxGeometry y="60" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="7qQUv7Jo1ADHQWkO8-V3-3" value="+ add(const std::shared_ptr&amp;lt; Unit &amp;gt;&amp;amp; unit, Flags flags&amp;nbsp;): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="gezvIGPkTuoUHlUliIxv-80">
+          <mxGeometry y="86" width="340" height="34" as="geometry" />
         </mxCell>
         <mxCell id="gezvIGPkTuoUHlUliIxv-86" value="ClassCpp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1471.88" y="1880" width="247.5" height="86" as="geometry" />
@@ -340,7 +349,7 @@
         <mxCell id="6ZI4dqy2-xrWHT3vHo12-33" value="&lt;i&gt;Class&lt;/i&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1030" y="1065" width="350" height="148" as="geometry" />
         </mxCell>
-        <mxCell id="6ZI4dqy2-xrWHT3vHo12-34" value="# m_name : std::string&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;# using Fields = std::vector&amp;lt;std::shared_ptr&amp;lt;Unit&amp;gt;&amp;gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;# m_fields :&lt;/span&gt;&amp;nbsp;std::vector&amp;lt;Fields&amp;gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="6ZI4dqy2-xrWHT3vHo12-33" vertex="1">
+        <mxCell id="6ZI4dqy2-xrWHT3vHo12-34" value="&lt;div&gt;+&amp;nbsp;&lt;u&gt;ACCESS_MODIFIERS :&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;const&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;std::vector&amp;lt;std::string&amp;gt;&lt;/span&gt;&lt;/u&gt;&lt;br&gt;&lt;/div&gt;# m_name : std::string&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;# using Fields = std::vector&amp;lt;std::shared_ptr&amp;lt;Unit&amp;gt;&amp;gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;# m_fields :&lt;/span&gt;&amp;nbsp;std::vector&amp;lt;Fields&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="6ZI4dqy2-xrWHT3vHo12-33" vertex="1">
           <mxGeometry y="26" width="350" height="74" as="geometry" />
         </mxCell>
         <mxCell id="6ZI4dqy2-xrWHT3vHo12-35" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="6ZI4dqy2-xrWHT3vHo12-33" vertex="1">

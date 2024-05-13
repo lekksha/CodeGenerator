@@ -8,16 +8,23 @@
 class ClassCpp : public Class
 {
 public:
-    static const std::vector< std::string > ACCESS_MODIFIERS ;   // инициализирован вне класса
+
 
     explicit ClassCpp(const std::string &name): Class(name, ACCESS_MODIFIERS.size())  {    // конструктор.  инициализирует имя класса
         m_fields.resize( ACCESS_MODIFIERS.size() );     // изменяет размер вектора на размер равный количеству модификаторов доступа
         m_name = name;
     }
 
-    void add( const std::shared_ptr< Unit >& unit, Flags flags ) override    // функция для добавления член-данного или член-функции с своим модификатором доступа
+    void add( const std::shared_ptr< Unit >& unit, Flags flags) override    // функция для добавления член-данного или член-функции с своим модификатором доступа
     {
-        int accessModifier = PRIVATE;   // = 0
+        int accessModifier = PRIVATE;   // по умолчанию private
+        if (flags & PROTECTED) {
+            accessModifier = PROTECTED;
+        } else if (flags & PUBLIC) {
+            accessModifier = PUBLIC;
+        }
+        m_fields[ accessModifier ].push_back( unit );
+        /*
         if( flags < ACCESS_MODIFIERS.size() )   // ? Проверяем что модификатор доступа является корректным
         {
             accessModifier = flags; // Ставим соответствующий модификатор доступа
@@ -60,6 +67,5 @@ private:
                                     // модификатору доступа.
 };
 
-const std::vector< std::string > ClassCpp::ACCESS_MODIFIERS = { "public", "protected", "private" };
 
 #endif // CLASSCPP_H
