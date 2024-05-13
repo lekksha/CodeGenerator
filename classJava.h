@@ -8,7 +8,7 @@
 class ClassJava : public Class
 {
 public:
-    static const std::vector< std::string > ACCESS_MODIFIERS ;   // инициализирован вне класса
+    //static const std::vector< std::string > ACCESS_MODIFIERS ;   // инициализирован вне класса
 
     explicit ClassJava(const std::string &name): Class(name, ACCESS_MODIFIERS.size())  {    // конструктор.  инициализирует имя класса
         m_fields.resize( ACCESS_MODIFIERS.size() );     // изменяет размер вектора на размер равный количеству модификаторов доступа
@@ -17,13 +17,14 @@ public:
 
     void add( const std::shared_ptr< Unit >& unit, Flags flags ) override    // функция для добавления член-данного или член-функции с своим модификатором доступа
     {
-        int accessModifier = PRIVATE;   // = 0
-        if( flags < ACCESS_MODIFIERS.size() )   // ? Проверяем что модификатор доступа является корректным
-        {
-            accessModifier = flags; // Ставим соответствующий модификатор доступа
+        int accessModifier = PRIVATE;   // по умолчанию private
+        if (flags & PROTECTED) {
+            accessModifier = PROTECTED;
         }
-
-        m_fields[ accessModifier ].push_back( unit );   // Заготавливаем для компиляции под определенный модификатор доступа
+        else if (flags & PUBLIC) {
+            accessModifier = PUBLIC;
+        }
+        m_fields[ accessModifier ].push_back( unit );
         /*
         * В условии и последующей строчке с push_back реализовано добавление член-данных и член-функций под определеннным модификатором.
         * Если отказаться от них, то перед каждым член-данным и член-функцией будет писаться модификатор доступа. Это как миниммум не похоже
@@ -59,6 +60,6 @@ private:
                                     // модификатору доступа.
 };
 
-const std::vector< std::string > ClassJava::ACCESS_MODIFIERS = { "public", "protected", "private" };
+//const std::vector< std::string > ClassJava::ACCESS_MODIFIERS = { "public", "protected", "private" };
 
 #endif // CLASSJAVA_H
