@@ -18,9 +18,9 @@ public:
     void add( const std::shared_ptr< Unit >& unit, Flags flags) override    // функция для добавления член-данного или член-функции с своим модификатором доступа
     {
         int accessModifier = PRIVATE;   // по умолчанию private
-        if (flags & PROTECTED) {
+        if (flags == PROTECTED) {
             accessModifier = PROTECTED;
-        } else if (flags & PUBLIC) {
+        } else if (flags == PUBLIC) {
             accessModifier = PUBLIC;
         }
         m_fields[ accessModifier ].push_back( unit );
